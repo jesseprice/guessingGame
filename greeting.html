@@ -1,0 +1,19 @@
+<script>
+  var answer = Math.floor(Math.random() * 10);
+
+  function makeGuess(){
+
+    var guess = prompt("Pick a number between 0 and 9. Hint: " + answer);
+    var messageCorrect = "You Win!";
+    var messageWrong = "Try Again!";
+
+    if (guess == answer) {
+      alert(messageCorrect);
+    } else {
+      alert(messageWrong);
+      makeGuess();
+    };  
+  }
+
+  makeGuess();
+</script>
